@@ -14,6 +14,11 @@ class BlackForest{
    BlackForest(String name){
    this.name=name;
    }
+     
+   public class BlackForest extends cake{
+     BlackForest(String name){
+    super(name);}
+  }
    
    void setCake(String[] t, double s, double m, double b){
       topping = t;
@@ -40,8 +45,7 @@ class BlackForest{
    }
    
    double getTotalPrice(){
-      total = getSizeP();
-      total *= qty;
+      total = getSizeP()*= qty;
       total += (Order.length*10);
       return total;  
    }
@@ -82,7 +86,10 @@ class BlackForest{
       System.out.println("Total Price: RM" + getTotalPrice()); 
       for(int i=0;i<30;i++)
       System.out.println("-"); 
-   }}      
+   }
+  
+
+}      
 
   public class lab5_exercise3{
    public static void main(String args[]){
